@@ -39,28 +39,21 @@ A interface foi construída com **Thymeleaf**, e o banco de dados utilizado é o
 ## 🚀 Como Executar o Projeto
 
 1. Clone o repositório:
-   ```bash
    git clone https://github.com/krovtv/contas-app.git
 Acesse o diretório do projeto:
 
-bash
-Copiar código
 cd nome-do-projeto
 Execute o projeto com Maven:
+mvn spring-boot:run
 
-bash
-Copiar código
+
 mvn spring-boot:run
 Acesse no navegador:
-
-arduino
-Copiar código
 http://localhost:8080
-Console do H2:
 
-bash
-Copiar código
+Console do H2:
 http://localhost:8080/h2-console
+
 🧩 Funcionalidades
 Cadastro de contas
 
