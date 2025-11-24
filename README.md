@@ -54,7 +54,6 @@ Console do H2:
 http://localhost:8080/h2-console
 
 🧩 Funcionalidades
-Cadastro de contas
 
 Listagem filtrada por status
 
