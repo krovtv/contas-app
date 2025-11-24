@@ -40,15 +40,14 @@ A interface foi construída com **Thymeleaf**, e o banco de dados utilizado é o
 
 1. Clone o repositório:
    git clone https://github.com/krovtv/contas-app.git
-Acesse o diretório do projeto:
 
+2. Acesse o diretório do projeto:
 cd nome-do-projeto
-Execute o projeto com Maven:
+
+3. Execute o projeto com Maven:
 mvn spring-boot:run
 
-
-mvn spring-boot:run
-Acesse no navegador:
+4. Acesse no navegador:
 http://localhost:8080
 
 Console do H2:
