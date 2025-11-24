@@ -40,7 +40,7 @@ A interface foi construída com **Thymeleaf**, e o banco de dados utilizado é o
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+   git clone https://github.com/krovtv/contas-app.git
 Acesse o diretório do projeto:
 
 bash
