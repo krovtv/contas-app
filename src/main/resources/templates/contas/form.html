@@ -1,0 +1,35 @@
+<div th:fragment="body">
+  <h3 th:text="${conta.id} != null ? 'Editar Conta' : 'Nova Conta'">Nova Conta</h3>
+  <form th:action="@{/contas/salvar}" th:object="${conta}" method="post">
+    <input type="hidden" th:field="*{id}" />
+    <div class="mb-3">
+      <label class="form-label">Tipo</label>
+      <select class="form-select" th:field="*{tipo}">
+        <option value="PAGAR">PAGAR</option>
+        <option value="RECEBER">RECEBER</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Descrição</label>
+      <input class="form-control" th:field="*{descricao}" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Valor</label>
+      <input class="form-control" th:field="*{valor}" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Data Vencimento</label>
+      <input type="date" class="form-control" th:field="*{dataVencimento}" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Status</label>
+      <select class="form-select" th:field="*{status}">
+        <option value="PENDENTE">PENDENTE</option>
+        <option value="PAGO">PAGO</option>
+        <option value="ATRASADO">ATRASADO</option>
+      </select>
+    </div>
+    <button class="btn btn-success">Salvar</button>
+    <a class="btn btn-secondary" href="/contas">Cancelar</a>
+  </form>
+</div>

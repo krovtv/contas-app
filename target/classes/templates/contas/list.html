@@ -1,0 +1,20 @@
+<div th:fragment="body">
+  <h3>Contas <small class="text-muted">Saldo: R$ <span th:text="${#numbers.formatDecimal(saldo,2,',','.')}">0,00</span></small></h3>
+  <table class="table table-striped">
+    <thead><tr><th>ID</th><th>Tipo</th><th>Descrição</th><th>Valor</th><th>Vencimento</th><th>Status</th><th>Ações</th></tr></thead>
+    <tbody>
+      <tr th:each="c : ${contas}">
+        <td th:text="${c.id}">1</td>
+        <td th:text="${c.tipo}">PAGAR</td>
+        <td th:text="${c.descricao}">Descrição</td>
+        <td th:text="${#numbers.formatDecimal(c.valor,2,',','.')}">0,00</td>
+        <td th:text="${c.dataVencimento}">2025-01-01</td>
+        <td th:text="${c.status}">PENDENTE</td>
+        <td>
+          <a th:href="@{'/contas/editar/' + ${c.id}}" class="btn btn-sm btn-primary">Editar</a>
+          <a th:href="@{'/contas/excluir/' + ${c.id}}" class="btn btn-sm btn-danger" onclick="return confirm('Confirmar exclusão?');">Excluir</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
