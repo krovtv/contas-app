@@ -1,35 +1,61 @@
-<div th:fragment="body">
-  <h3 th:text="${conta.id} != null ? 'Editar Conta' : 'Nova Conta'">Nova Conta</h3>
-  <form th:action="@{/contas/salvar}" th:object="${conta}" method="post">
-    <input type="hidden" th:field="*{id}" />
-    <div class="mb-3">
-      <label class="form-label">Tipo</label>
-      <select class="form-select" th:field="*{tipo}">
-        <option value="PAGAR">PAGAR</option>
-        <option value="RECEBER">RECEBER</option>
-      </select>
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - Contas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{src\main\resources\static\css\styles.css}">
+</head>
+<body>
+    <div th:fragment="body">
+        <h3 th:text="${conta.id != null ? 'Editar Conta' : 'Nova Conta'}">Nova Conta</h3>
+        
+        <form th:action="@{/contas/salvar}" th:object="${conta}" method="post">
+            <input type="hidden" th:field="*{id}" />
+            
+            <div class="mb-3">
+                <label for="tipo" class="form-label">Tipo</label>
+                <select class="form-select" id="tipo" th:field="*{tipo}" required>
+                    <option value="">Selecione...</option>
+                    <option value="PAGAR">A Pagar</option>
+                    <option value="RECEBER">A Receber</option>
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição</label>
+                <input type="text" class="form-control" id="descricao" 
+                       th:field="*{descricao}" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="valor" class="form-label">Valor</label>
+                <input type="number" class="form-control" id="valor" 
+                       th:field="*{valor}" step="0.01" min="0" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="dataVencimento" class="form-label">Data de Vencimento</label>
+                <input type="date" class="form-control" id="dataVencimento" 
+                       th:field="*{dataVencimento}" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-select" id="status" th:field="*{status}" required>
+                    <option value="">Selecione...</option>
+                    <option value="PENDENTE">Pendente</option>
+                    <option value="PAGO">Pago</option>
+                    <option value="CANCELADO">Cancelado</option>
+                </select>
+            </div>
+            
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href="/contas" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
     </div>
-    <div class="mb-3">
-      <label class="form-label">Descrição</label>
-      <input class="form-control" th:field="*{descricao}" />
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Valor</label>
-      <input class="form-control" th:field="*{valor}" />
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Data Vencimento</label>
-      <input type="date" class="form-control" th:field="*{dataVencimento}" />
-    </div>
-    <div class="mb-3">
-      <label class="form-label">Status</label>
-      <select class="form-select" th:field="*{status}">
-        <option value="PENDENTE">PENDENTE</option>
-        <option value="PAGO">PAGO</option>
-        <option value="ATRASADO">ATRASADO</option>
-      </select>
-    </div>
-    <button class="btn btn-success">Salvar</button>
-    <a class="btn btn-secondary" href="/contas">Cancelar</a>
-  </form>
-</div>
+</body>
+</html>
