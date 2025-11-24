@@ -1,26 +1,78 @@
+# Sistema de Contas a Pagar e a Receber
 
-# Contas App - Contas a Pagar e Receber (Spring Boot)
+Este projeto é uma aplicação web desenvolvida em **Spring Boot** para gerenciar **Contas a Pagar e Contas a Receber**, permitindo o controle financeiro de forma simples e organizada.
 
-## Como executar
+A aplicação oferece:
 
-Requisitos:
-- Java 17+
-- Maven
+- ✔️ Cadastro de contas  
+- ✔️ Edição  
+- ✔️ Visualização  
+- ✔️ Exclusão  
+- ✔️ Classificação entre:  
+  - **Pendentes**  
+  - **Pagas**  
+  - **A Receber**  
+  - **Recebidas**
 
-1. Construir e executar:
-```
+A interface foi construída com **Thymeleaf**, e o banco de dados utilizado é o **H2 em memória**, ideal para testes e desenvolvimento.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### Backend
+- Java **17**
+- Spring Boot **3.1.6**
+- Spring Web (REST/MVC)
+- Spring Data JPA
+- Lombok
+
+### Frontend
+- Thymeleaf  
+- HTML5 / CSS3
+
+### Banco de Dados
+- H2 Database (em memória)
+
+---
+
+## 🚀 Como Executar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
+Acesse o diretório do projeto:
+
+bash
+Copiar código
+cd nome-do-projeto
+Execute o projeto com Maven:
+
+bash
+Copiar código
 mvn spring-boot:run
-```
-2. A aplicação roda em http://localhost:8080/contas
-3. Console H2: http://localhost:8080/h2-console (jdbc:h2:mem:contasdb)
+Acesse no navegador:
 
-## Estrutura
-- src/main/java/com/uniruy/contas
-  - model/Conta.java
-  - repository/ContaRepository.java
-  - service/ContaService.java
-  - controller/ContaController.java
+arduino
+Copiar código
+http://localhost:8080
+Console do H2:
 
-## Observações
-- Banco em memória H2 para facilitar execução local. Para MySQL, altere `application.properties`.
-- DDL disponível em `sql/ddl_contas.sql`.
+bash
+Copiar código
+http://localhost:8080/h2-console
+🧩 Funcionalidades
+Cadastro de contas
+
+Listagem filtrada por status
+
+Edição e exclusão de registros
+
+Organização por tipo (Pagar / Receber)
+
+Banco em memória reiniciado a cada execução
+
+👥 Membros do Projeto
+Nome	Matrícula
+Kauã Oliveira	202303982071
+Lucas Lima Monteiro	202402533011
