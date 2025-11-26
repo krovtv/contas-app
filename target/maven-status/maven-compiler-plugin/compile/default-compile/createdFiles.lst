@@ -1,5 +1,0 @@
-com\uniruy\contas\service\ContaService.class
-com\uniruy\contas\controller\ContaController.class
-com\uniruy\contas\model\Conta.class
-com\uniruy\contas\ContasApplication.class
-com\uniruy\contas\repository\ContaRepository.class
