@@ -24,18 +24,22 @@ O projeto também está disponível online em:
 
 👉 https://contas-app-production.up.railway.app/login
 
-🧩 Funcionalidades da Aplicação
+---
+
+## 🧩 Funcionalidades da Aplicação
 
 A aplicação oferece:
 
-✔️ Cadastro de contas
-✔️ Edição de contas
-✔️ Visualização detalhada
-✔️ Exclusão de contas
-Pendentes
-Pagas
-A Receber
-
+✔️ Cadastro de contas  
+✔️ Edição de contas  
+✔️ Visualização detalhada  
+✔️ Exclusão de contas  
+✔️ Classificação das contas em:  
+- **Pendentes**  
+- **Pagas**  
+- **A Receber**
+  
+---
 ### 🏗️ Estrutura do Projeto
 src/main/java/com/uniruy/contas
 ├── model/
@@ -47,18 +51,20 @@ src/main/java/com/uniruy/contas
 └── controller/
     └── ContaController.java
     
-###🗄️ Banco de Dados
 
-Utiliza H2 em memória para facilitar os testes locais.
+## 🗄️ Banco de Dados
 
-Para usar MySQL, altere o arquivo application.properties.
+- Utiliza **H2 em memória** para facilitar os testes locais.  
+- Para usar **MySQL**, altere o arquivo `application.properties`.  
+- Script SQL disponível em:
 
-Script SQL disponível em:
+📄 **sql/ddl_contas.sql**
 
-📄 sql/ddl_contas.sql
+---
 
-sql
+## 👥 Membros do Projeto
 
-👥 Membros do Projeto
-Kauã Oliveira	- 202303982071
-Lucas Lima Monteiro	- 202402533011
+| Nome | Matrícula |
+|------|-----------|
+| **Kauã Oliveira** | 202303982071 |
+| **Lucas Lima Monteiro** | 202402533011 |
